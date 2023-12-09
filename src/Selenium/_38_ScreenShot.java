@@ -2,6 +2,7 @@ package Selenium;
 
 import Utilities.BaseDriver;
 import org.apache.commons.io.FileUtils;
+import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
@@ -16,7 +17,6 @@ public class _38_ScreenShot extends BaseDriver {
     @Test
     public void Test() throws IOException {
         driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
-
         WebElement userName = driver.findElement(By.cssSelector("input[placeholder='Username']"));
         userName.sendKeys("gokhan");
 
@@ -36,7 +36,6 @@ public class _38_ScreenShot extends BaseDriver {
             FileUtils.copyFile(hafizayaAtilacak, new File("src/ScreenShotFiles/screenshot.png"));
         }
         //TODO: İsimlendirmeyi öyle bir yapalım ki ekran kayıtlarını tekil hale getirsin. Her aldığı kaydı görebilelim.
-
         BekleKapat();
 
     }
